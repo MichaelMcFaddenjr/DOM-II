@@ -20,15 +20,15 @@ introHeader.addEventListener('mouseover', function(event){
 
 // resize
 
-window.addEventListener("resize", function(){
-    alert("Resized window!")
-})
+// window.addEventListener("resize", function(){
+//     alert("Resized window!")
+// })
 
 // load
 
-window.addEventListener("load", function(){
-    alert("Time to Travel")
-})
+// window.addEventListener("load", function(){
+//     alert("Time to Travel")
+// })
 
 // scroll
 
@@ -42,11 +42,18 @@ window.addEventListener("scroll", function(event){
 
 // click
 
-const button = document.querySelector(".btn1");
+const button = document.querySelectorAll(".btn");
+const buttonArray = Array.from(button);
+console.log(buttonArray);
 
-function buttonClick() {
-    button.textContent = (`You Clicked Me`);
-}
+// buttonArray.forEach(function (button) {
+//     button.addEventListener("click", function (evt) {
+//         evt.textContent= "Clicked!";
+//     })
+// })
 
-button.addEventListener("click", buttonClick);
-
+buttonArray.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        button.textContent = "clicked!";
+    })
+})
