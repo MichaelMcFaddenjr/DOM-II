@@ -1,5 +1,5 @@
 // Your code goes here
-
+import { gsap } from "gsap";
 // mouseover
 
 const logoHeading = document.querySelector('.logo-heading');
@@ -57,3 +57,5 @@ buttonArray.forEach((button) => {
         button.textContent = "clicked!";
     })
 })
+
+
